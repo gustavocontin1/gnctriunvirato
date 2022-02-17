@@ -6,53 +6,25 @@
     box-sizing: border-box;
 }
 
-
-.container__inicio {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 400px 150px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "hero hero hero"
-      "footer footer footer";
-    width: 100%;
-    height: 100%;
-    
-  }
-  
-
-a{
-    text-decoration: none;
-    color: black;
-    overflow: hidden;
-    
+.logo{ 
+    height: 120px;
+    width: 120px;
+    margin: .5rem;
 }
-
-ul{
+.navbar-collapse{
     display: flex;
+    justify-content: end;
+}
+ul{
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 }
 li{
     color: white;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.9rem;
     border-radius: .5rem;
-    list-style: none;
-    
-
-}
-nav ul li:hover{
-    background-color: rgb(59, 209, 79);
-    transition: 1.3s;
-}
-
-a img{
-    max-width: 10rem;
-    max-height: 10rem;
+    list-style: none; 
 }
 
 h1{
@@ -62,7 +34,9 @@ h1{
     font-family: 'Bebas Neue', sans-serif;
     color: white;
 }
-
+h2{
+    font-size: 3rem;
+}
 h3{
     font-size: 2rem;
     margin-left: 4rem;
@@ -71,19 +45,13 @@ h3{
 }
 
 .header { 
-        grid-area: header; 
-        padding: 0px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
         background-color: #f1e6e6;
         background-image: linear-gradient(0deg, #f1e6e6 0%, #006400 50%, #0c0b0b 100%);; 
 } 
 
 /*Main*/ 
-.hero { 
-    grid-area: hero;
+.jumbotron { 
+    height: 500px;
     background-image: url("https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     background-size: cover;
     background-position: center; 
@@ -92,50 +60,25 @@ h3{
     justify-content: center;
     align-items:left;
  }
- .container__nosotros {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 500px 150px;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "main-nosotros main-nosotros main-nosotros"
-      "footer footer footer";
-  }
-  
-  
-  .main-nosotros {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1.7fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "titulo-nosotros titulo-nosotros titulo-nosotros"
-      "info-nosotros info-nosotros info-nosotros"
-      "info-nosotros info-nosotros info-nosotros";
-    grid-area: main-nosotros;
+ 
+  .main-nosotros{
     background-color: #ffffff;
     background-image: linear-gradient(180deg, #ffffff 0%, #000000 25%, #006400 50%, #000000 75%, #ffffff 100%);
   }
-  
   .titulo-nosotros { 
-    grid-area: titulo-nosotros;
     color: black;
     font-family: 'staatliches', cursive;
-    font-size: 2rem;
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;  
 }
   
-  .info-nosotros { 
+.info-nosotros { 
     grid-area: info-nosotros;
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
 .item-nos{
     width: 50%;
@@ -165,19 +108,6 @@ h3{
     grid-row: 2/3;
 }
 
-.container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 100px 400px 150px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "tituloserv tituloserv tituloserv"
-      "servicios servicios servicios"
-      "footer footer footer"; 
-    
-  }
-
 .main__servicios{
     background-color: #ffffff;
     background-image: linear-gradient(180deg, #ffffff 0%, #000000 25%, #006400 50%, #000000 75%, #ffffff 100%);
@@ -204,7 +134,6 @@ h3{
       "serv1 serv2 serv3"
       "serv1 serv2 serv3"; 
     grid-area: servicios;
-
 }
 
 .serv1 {
@@ -220,7 +149,6 @@ h3{
     height: 300px;
     margin-bottom: 1rem;
     border-radius: .5rem;
-    
 }
 .serv2 {
     grid-area: serv2; 
@@ -251,112 +179,40 @@ h3{
     justify-content: center;
     text-align: center;  
 }
-
-.container__galeria {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 1000px 150px;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "main main main"
-      "footer footer footer";
-  }
-  
-  .main__galeria {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.4fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "titulo-galeria titulo-galeria titulo-galeria"
-      "img-galeria img-galeria img-galeria"
-      "img-galeria img-galeria img-galeria";
-    grid-area: main;
-    background-color: #ffffff;
-    background-image: linear-gradient(180deg, #ffffff 0%, #000000 25%, #006400 50%, #000000 75%, #ffffff 100%);
-  }
-  
-.titulo-galeria { 
-    grid-area: titulo-galeria;
+.titulo-galeria, .titulo__servicios { 
+    height: 10%;
     color: black;
     font-family: 'staatliches', cursive;
-    font-size: 2rem;
     margin-top: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center; 
+    justify-content: center;  
 }
-  
-.img-galeria { 
-    grid-area: img-galeria;
+.main__galeria{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 20px 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, #000000 25%, #006400 50%, #000000 75%, #ffffff 100%);
+    margin: 0;
 }
-  
+.row{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content:space-evenly;
+}
+
 .item{
-    margin: .5rem;
     height: 400px;
     width: 400px;
-    border: 2px solid white;
-    border-radius: .5rem;
-}
-.item1{
-    background-image: url(../img/equipo-chery-tiggo.jpg);
-    background-size: cover;
+    margin: 1rem;
 }
 
-.item2{
-    background-image: url(../img/equipo-peugeot-partner.jpg);
-    background-size: cover;
-}  
-
-.item3{
-    background-image: url(../img/equipo-renault-fluence.jpg);
-    background-size: cover;
-}  
-
-.item4{
-    background-image: url(../img/equipo-renault-fluence.jpg);
-    background-size: cover;
-}  
-
-.item5{
-    background-image: url(../img/equipo-toyota-corolla.jpg);
-    background-size: cover;
-}  
-
-.item6{
-    background-image: url(../img/equipo-volkswagen-vento.jpg);
-    background-size: cover;
-}  
-
- .container__contacto {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 1100px 150px;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "main main main"
-      "footer footer footer";
-  }
-  
-
-  
-.titulo__contacto { 
+.titulo__contacto {
+    height: 10%; 
     color: black;
     font-family: 'staatliches', cursive;
-    font-size: 2rem;
-    margin: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -365,33 +221,33 @@ h3{
 .main__contacto { 
     grid-area: main;
     background-color: #ffffff;
-background-image: linear-gradient(0deg, #ffffff 0%, #000000 22%, #006400 33%, #000000 71%, #ffffff 100%);
-
-
-
+    background-image: linear-gradient(0deg, #ffffff 0%, #000000 22%, #006400 33%, #000000 71%, #ffffff 100%);
 }
 
 .contacto__ubicacion{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2rem;
-
+    border: 4px inset rgb(59, 209, 79);
 }
 
 .texto__contacto{
     color: white;
-    max-width: 300px;
-    max-height: 150px;
+    width: 25%;
+    height: 30%;
     margin: 2rem;
     text-align: center;
-    border: 8px inset rgb(59, 209, 79);
-    margin-top: 70px;
+}
+
+.mapa{
+    margin: 1rem;
 }
 
 .contacto__h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 10%;
     margin-bottom: 0;
     margin-right: 50px;
 }
@@ -499,7 +355,7 @@ footer {
      body{
          position: relative;
      }
-    .container__inicio {  display: grid;
+   /* .container__inicio {  display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 150px 400px 150px;
         grid-auto-rows: 1fr;
@@ -534,7 +390,7 @@ footer {
         font-size: 1rem;
         padding: 0.3rem;
         margin: 0;
-    }
+    }*/
       .hero { 
         grid-area: main;
         background-size: cover;
@@ -650,4 +506,3 @@ footer {
         line-height: 50%;
     }
 }
-

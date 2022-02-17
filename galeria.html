@@ -4,38 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GNC Triunvirato</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GNC Triunvirato</title>
 </head>
 <body class="container__galeria">
     <header class="header">
-        <a href="index.html"><img class="logo" src="img/logo2.png" alt="logo gnc triunvirato"></a>
-        <nav>
-            <ul>
-                <a href="index.html"><li>Inicio</li></a>
-                <a href="nosotros.html"><li>Nosotros</li></a>
-                <a href="servicios.html"><li>Servicios</li></a>
-                <a href="galeria.html"><li>Galería</li></a>
-                <a href="contacto.html"><li>Contacto</li></a>
-            </ul>
-        </nav>
+        <!--Inicio navbar-->
+        <nav class="navbar navbar-expand-md  navbar-dark">
+            <!-- Brand -->
+            
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo2.png" alt="logo"></a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!--Fin navbar-->
     </header>
-    <main class="main__galeria">
-      <div class="titulo-galeria">
-        <h2>Galería</h2>
-      </div>
-      <section class="img-galeria">
-        <div class="item item1"></div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
-        <div class="item item4"></div>
-        <div class="item item5"></div>
-        <div class="item item6"></div>
-      </section>
+    <main>
+        <div class="main__galeria">
+            <div class="titulo-galeria">
+                <h2 class="titulo-gal">Galería</h2>
+            </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                    <img src="img/equipo-chery-tiggo.jpg" alt="equipo chery tiggo" class="item">
+                    <img src="img/equipo-nissan-tiida.jpg" alt="equipo nissan tiida" class="item">
+                    <img src="img/equipo-peugeot-partner.jpg" alt="equipo peugeot" class="item">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <img src="img/equipo-renault-fluence.jpg" alt="equipo renault fluence" class="item">
+                    <img src="img/equipo-toyota-corolla.jpg" alt="equipo toyota corolla" class="item">
+                    <img src="img/equipo-volkswagen-vento.jpg" alt="equipo volkswagen vento" class="item">
+                </div>
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__enlaces">
@@ -56,5 +110,8 @@
             <a href="https://api.whatsapp.com/send?phone=+541126382308"><i class="fab fa-whatsapp"></i></i></a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </body>
 </html>
