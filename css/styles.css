@@ -30,7 +30,6 @@ li{
 h1{
     font-size: 6rem;
     margin-left: 3rem;
-    text-shadow: (59, 59, 59) 0.1rem 0.1rem 0.2rem;
     font-family: 'Bebas Neue', sans-serif;
     color: white;
 }
@@ -51,7 +50,7 @@ h3{
 
 /*Main*/ 
 .jumbotron { 
-    height: 500px;
+    height: auto;
     background-image: url("https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     background-size: cover;
     background-position: center; 
@@ -59,6 +58,9 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items:left;
+    text-shadow:0 0 10px rgb(56, 56, 56) ;
+    margin-bottom: 0;
+    border-radius: 0;
  }
  
   .main-nosotros{
@@ -114,7 +116,6 @@ h3{
 }
   
 .tituloserv {
-    grid-area: tituloserv;
     color: black;
     font-family: 'staatliches', cursive;
     font-size: 2rem;
@@ -219,7 +220,6 @@ h3{
 }
   
 .main__contacto { 
-    grid-area: main;
     background-color: #ffffff;
     background-image: linear-gradient(0deg, #ffffff 0%, #000000 22%, #006400 33%, #000000 71%, #ffffff 100%);
 }
@@ -312,20 +312,19 @@ h3{
    
 /*Footer*/  
 footer { 
-    grid-area: footer;
+    height: 10%;
     background-color: #f1e6e6;
     background-image: linear-gradient(180deg, #f1e6e6 0%, #006400 50%, #0c0b0b 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 0.1rem;
-    line-height: 1.7rem;
     color: white;
  }
 
  .footer__enlaces{
      text-align: center;
-     font-size: 1.2rem;
+     font-size: 1rem;
      font-family: 'staatliches', sans-serif;
      margin-top: 2rem;
  }
@@ -348,83 +347,62 @@ footer {
 
  /*Media Queries*/
  @media screen and (max-width:320px ) {
-     html, body{
-         overflow-x: clip;
-         width: 100%;
-     }
-     body{
-         position: relative;
-     }
-   /* .container__inicio {  display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 150px 400px 150px;
-        grid-auto-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "header"
-          "main"
-          "footer";
-        
-      }
-      
-      .header { 
-        grid-area: header;
+    html, body{ 
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        justify-content: center;
-        margin-bottom: 1rem;
     }
 
-    .logo{
-        display: flex;
-        width: 100px;
-        justify-content: center;
+    body{
+        position:relative;
     }
 
-    li{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1rem;
-        padding: 0.3rem;
-        margin: 0;
-    }*/
-      .hero { 
-        grid-area: main;
-        background-size: cover;
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 70%;
+    }
 
-     }
-     h1{
+    .jumbotron{
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    h1{
         font-size: 3rem;
         text-align: center;
         margin-left: 0;
-     }
-     h3{
+    }
+
+    h3{
         font-size: 1rem;
         text-align: center;
         margin-left: 0;
-     }
-     .titulo-nosotros, .titulo__servicios, .titulo-galeria{
-         width: 100%;
-     }
-     div h2{
-         font-size: 98%;
-     }
-     .info-nosotros{
-         display: flex;
-         flex-direction: column;
+    }
+
+    .titulo-nosotros, .titulo__servicios, .titulo-galeria{
+        font-size: 1rem;
+    }
+     
+    div h2{
+        font-size: 1.9rem;
+    }
+    .info-nosotros{
+        display: flex;
+        flex-direction: column;
         
     }
+
     .item-nos1{
-        height:60% ;
         width: 93%;
+        height: 200px;
+        background-position: left;
     }
 
     .item-nos2{
         width: 93%;
         overflow: scroll;
+    }
+
+    .texto-nos{
+        font-size: 1rem;
+        margin: 0;
     }
 
     .servicios{
@@ -449,9 +427,9 @@ footer {
     }
 
     .item{
-        margin: 5%;
-        padding: 0;
+        width: 70%;
         height: 35%;
+        padding: 0;
         background-size: cover;
         
     }
@@ -460,14 +438,14 @@ footer {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 0;
+        margin: 5%;
         padding: 0;
-        width: 100%;
         
     }
     .mapa{
         width: 80%;
     }
+    
     .texto__contacto{
         margin-top: 10%;
         
@@ -475,6 +453,8 @@ footer {
 
     .contacto__h3{
         margin-right: 0;
+        color: white;
+        font-size: 1.2rem;
     }
 
     .formulario{
@@ -490,15 +470,18 @@ footer {
 
    
     footer { 
-        grid-area: footer;
-        font-size: .3rem;
         margin-top: 0;
         text-align: center;
+        height: 20%;
     }
+
+    h5, h4{
+        font-size: .8rem;
+    }
+
     .ubicacion{
-        font-size: .9rem;
+        font-size: .8rem;
         margin:0;
-        
     }
     
     .fas{
