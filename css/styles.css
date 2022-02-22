@@ -346,7 +346,7 @@ footer {
   
 
  /*Media Queries*/
- @media screen and (max-width:320px ) {
+ @media screen and (max-width:576px ) {
     html, body{ 
         width: 100%;
     }
@@ -391,12 +391,12 @@ footer {
 
     .item-nos1{
         width: 93%;
-        height: 200px;
         background-position: left;
     }
 
     .item-nos2{
         width: 93%;
+        height: auto;
         overflow: scroll;
     }
 
