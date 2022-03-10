@@ -87,7 +87,7 @@ h2{
     flex-direction: row;
     width: 100%;
     .item-nos{
-        width: 50%;
+        width: 93%;
         margin: 1rem;
     }
 }
@@ -449,7 +449,11 @@ footer {
     .info-nosotros{
         display: flex;
         flex-direction: column;
-        
+        width: 100%;
+    }
+
+    .item-nos{
+        width: 100%;
     }
 
     .item-nos1{
