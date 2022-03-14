@@ -1,3 +1,17 @@
+.btn, .contacto__btn {
+  background-color: #3bd14f;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 20%;
+  text-align: center;
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +97,7 @@ h2 {
   width: 100%;
 }
 .info-nosotros .item-nos {
-  width: 50%;
+  width: 93%;
   margin: 1rem;
 }
 
@@ -209,12 +223,15 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.galeria-img li {
+
+li {
   margin: 5px;
 }
-.galeria-img img {
+
+img {
   width: 300px;
   height: 300px;
+  border-radius: 0.5rem;
 }
 
 .modal {
@@ -372,18 +389,7 @@ h2 {
 }
 
 .contacto__btn {
-  background-color: #3bd14f;
   color: white;
-  padding: 1rem;
-  margin-top: 1rem;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  width: 20%;
-  text-align: center;
-  border: none;
 }
 
 /*Footer*/
@@ -463,6 +469,11 @@ footer {
   .info-nosotros {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .item-nos {
+    width: 100%;
   }
 
   .item-nos1 {

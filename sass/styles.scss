@@ -1,6 +1,8 @@
 $var:white;
 $var1:black;
 
+@import '_bases.scss';
+
 @mixin logo {
     height: 120px;
     width: 120px;
